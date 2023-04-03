@@ -10,9 +10,7 @@ module.exports = {
             password
         }
 
-        await Queue.add({ user })
-
-        
+        await Queue.add('RegistrationMail', { user })    
 
         return res.json(user);
     }

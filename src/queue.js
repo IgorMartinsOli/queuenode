@@ -1,5 +1,5 @@
-require('dotenv').config()
-const Queue = require('./app/lib/Queue');
-const RegistrationMail = require('./app/jobs/RegistrationMail');
+import 'dotenv/config';
 
-Queue.process(RegistrationMail.handle)
+import Queue from './app/lib/Queue';
+
+Queue.process(); 
