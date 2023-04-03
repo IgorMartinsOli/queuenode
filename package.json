@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm-run-all -p start*",
+    "startserv": "nodemon src/server.js",
+    "startqueue": "nodemon src/queue.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bull": "^4.10.4",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5"
   }
 }
